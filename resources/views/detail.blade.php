@@ -3,8 +3,8 @@
 <head>
     <title>{{$detail->name}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
-    <script type="text/javascript" src="{{asset('js/detail.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('bower_components/bower_mendan/assets/css/detail.css')}}">
+    <script type="text/javascript" src="{{asset('bower_components/bower_mendan/assets/js/detail.js')}}"></script>
 </head>
 
 <body style="background-color: #262626">
@@ -12,7 +12,7 @@
 <div class="slideshow-container">
     @foreach($detail->images as $image)
         <div class="mySlides fade">
-            <img src="{{asset('img/detail/'.$detail->type.'/'.$image->name)}}" class="img-slide">
+            <img src="{{asset('bower_components/bower_mendan/assets/img/detail/'.$detail->type.'/'.$image->name)}}" class="img-slide">
         </div>
     @endforeach
 </div>

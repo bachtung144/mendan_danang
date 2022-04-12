@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class);
-Route::get('/{type}', ContentController::class)->name('content');
+Route::get('/{type}', ContentController::class)->name('Content');
 Route::get('/{type}/{id}', DetailController::class)->name('detail');

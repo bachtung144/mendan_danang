@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>今月</title>
+    <title>ダナン市</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/templatemo-main.css')}}">
-    <script src="{{asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('bower_components/bower_mendan/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('bower_components/bower_mendan/assets/css/templatemo-main.css')}}">
+    <script src="{{asset('bower_components/bower_mendan/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 </head>
@@ -91,8 +91,8 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <a href="{{ route('content', ['type' => 'location']) }}">
-                        <img src="{{asset('img/detail/reward/mk.jpg')}}" alt="" style="width: 100%; height: 250px">
+                    <a href="{{ route('Content', ['type' => 'location']) }}">
+                        <img src="{{asset('bower_components/bower_mendan/assets/img/detail/reward/mk.jpg')}}" alt="" style="width: 100%; height: 250px">
                     </a>
                     <div style="align-self: center; padding: 15px">
                         <h4><b>景勝地</b></h4>
@@ -101,8 +101,8 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <a href="{{ route('content', ['type' => 'festival']) }}">
-                        <img src="{{asset('img/detail/main/le-hoi.jpg')}}" alt="" style="width: 100%; height: 250px">
+                    <a href="{{ route('Content', ['type' => 'festival']) }}">
+                        <img src="{{asset('bower_components/bower_mendan/assets/img/detail/main/le-hoi.jpg')}}" alt="" style="width: 100%; height: 250px">
                     </a>
                     <div style="align-self: center; padding: 15px">
                         <h4><b>お祭り</b></h4>
@@ -112,8 +112,8 @@
 
             <div class="col">
                 <div class="card">
-                    <a href="{{ route('content', ['type' => 'food']) }}">
-                        <img src="{{asset('img/detail/main/am-thuc.jpg')}}" alt="" style="width: 100%; height: 250px">
+                    <a href="{{ route('Content', ['type' => 'food']) }}">
+                        <img src="{{asset('bower_components/bower_mendan/assets/img/detail/main/am-thuc.jpg')}}" alt="" style="width: 100%; height: 250px">
                     </a>
                     <div style="align-self: center; padding: 15px">
                         <h4><b>飲み食い</b></h4>
@@ -132,7 +132,7 @@
                     <section id="first-tab-group" class="tabgroup">
                         @foreach($rewards as $reward)
                             <div id="{{$reward->id}}">
-                                <img src="{{asset('img/detail/reward/'.$reward->thumbnail)}}">
+                                <img src="{{asset('bower_components/bower_mendan/assets/img/detail/reward/'.$reward->thumbnail)}}">
                                 <p>{{$reward->description}}</p>
                             </div>
                         @endforeach
@@ -175,9 +175,9 @@
     </div>
 </footer>
 
-<script>window.jQuery || document.write('<script src="{{asset('js/vendor/jquery-1.11.2.min.js')}}"><\/script>')</script>
-<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/main.js')}}"></script>
+<script>window.jQuery || document.write('<script src="{{asset('bower_components/bower_mendan/assets/js/vendor/jquery-1.11.2.min.js')}}"><\/script>')</script>
+<script src="{{asset('bower_components/bower_mendan/assets/js/vendor/bootstrap.min.js')}}"></script>
+<script src="{{asset('bower_components/bower_mendan/assets/js/main.js')}}"></script>
 
 </body>
 </html>

@@ -13,7 +13,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(
+            \App\Repositories\Content\ContentRepositoryInterface::class,
+            \App\Repositories\Content\ContentRepository::class,
+        );
+
+        $this->app->singleton(
+            \App\Repositories\Reward\RewardRepositoryInterface::class,
+            \App\Repositories\Reward\RewardRepository::class,
+        );
     }
 
     /**

@@ -1,0 +1,21 @@
+{
+  "name": "bower_mendan",
+  "homepage": "https://github.com/bachtung144/bower_mendan.git",
+  "authors": [
+    "bachtung144 <bachtung144007@gmail.com>"
+  ],
+  "description": "Bower for mendan",
+  "main": "/",
+  "keywords": [
+    "fonticons"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

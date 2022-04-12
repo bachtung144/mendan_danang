@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\Content\ContentRepositoryInterface;
 use Illuminate\Http\Request;
-use App\Models\Content;
 
 class ContentController extends Controller
 {
@@ -13,10 +13,17 @@ class ContentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
+    protected $contentRepo;
+
+    public function __construct(ContentRepositoryInterface $contentRepo)
+    {
+        $this->contentRepo = $contentRepo;
+    }
+
     public function __invoke(Request $request, $type)
     {
-        $contents = Content::where('type', $type)->get();
+        $contents = $this->contentRepo->getByType($type);
 
-        return view("content", compact('contents', 'type'));
+        return view("Content", compact('contents', 'type'));
     }
 }

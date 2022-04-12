@@ -17,8 +17,8 @@
             @break
         @endswitch
     </title>
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/detail.css')}}">
+    <link rel="stylesheet" href="{{asset('bower_components/bower_mendan/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('bower_components/bower_mendan/assets/css/detail.css')}}">
 </head>
 <body>
 <div class="team-grid">
@@ -27,7 +27,7 @@
             @foreach ($contents as $content)
             <div class="col-md-4 col-lg-3 item">
                 <div class="box"
-                     style="background-image: url('{{ asset('img/detail/'.$content->type.'/'.$content->thumbnail)}}');"
+                     style="background-image: url('{{ asset('bower_components/bower_mendan/assets/img/detail/'.$content->type.'/'.$content->thumbnail)}}');"
                      onclick="window.location='{{route('detail',['type' => $content->type, 'id' => $content->id])}}'">
                     <div class="cover">
                         <h3 class="name">{{$content->name}}</h3>
